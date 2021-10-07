@@ -1,0 +1,103 @@
+{
+    "name": "softescu/drupal9",
+    "description": "Composer template for Drupal 9",
+    "type": "project",
+    "require": {
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.6.5",
+        "drupal/console": "^1.9",
+        "drupal/core-composer-scaffold": "^9.2",
+        "drupal/core-dev": "^9.2",
+        "drupal/core-recommended": "^9.2",
+        "drush/drush": "^10.6",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.2"
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+      },
+      {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
+      }
+    ],
+    "minimum-stability": "dev",
+    "extra": {
+      "drupal-composer-helper": {
+        "web-prefix": "docroot"
+      },
+      "composer-exit-on-patch-failure": true,
+      "patchLevel": {
+        "drupal/core": "-p2"
+      },
+      "enable-patching": "true",
+      "installer-paths": {
+        "docroot/core": [
+          "type:drupal-core"
+        ],
+        "docroot/libraries/{$name}": [
+          "type:drupal-library",
+          "type:bower-asset",
+          "type:npm-asset"
+        ],
+        "docroot/modules/contrib/{$name}": [
+          "type:drupal-module"
+        ],
+        "docroot/profiles/contrib/{$name}": [
+          "type:drupal-profile"
+        ],
+        "docroot/themes/contrib/{$name}": [
+          "type:drupal-theme"
+        ],
+        "drush/Commands/contrib/{$name}": [
+          "type:drupal-drush"
+        ]
+      },
+      "installer-types": [
+        "bower-asset",
+        "npm-asset"
+      ],
+      "drupal-scaffold": {
+        "locations": {
+          "web-root": "./docroot"
+        }
+      }
+    },
+    "prefer-stable": true,
+    "conflict": {
+      "drupal/drupal": "*"
+    },
+    "scripts": {
+      "pre-install-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+      ],
+      "pre-update-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+      ],
+      "post-install-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+        "scripts/composer/post-install.sh"
+      ],
+      "post-update-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      ]
+    },
+    "config": {
+      "bin-dir": "bin/",
+      "sort-packages": true,
+      "optimize-autoloader": true
+    },
+    "autoload": {
+      "classmap": [
+        "scripts/composer/ScriptHandler.php"
+      ],
+      "files": [
+        "load.environment.php"
+      ]
+    }
+  }
