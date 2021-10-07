@@ -1,12 +1,42 @@
 # Technical Test
 
-
-
 ## Getting started
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+In order to start your Technical Test, you will need to fork this repository.
+Once forked, clone the forked version on your local machine and run:
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+```
+composer install
+```
+
+Once composer finishes installing the dependencies, you should be able to add the Drupal site into your local development environment and tie it to a database.
+
+The database configuration should be placed into the settings.php file located in:
+
+``` 
+docroot/sites/default/settings.php 
+
+```
+
+The configuration should look similar to the below options.
+
+```
+$settings['config_sync_directory'] = '../config/sync';
+$settings['file_chmod_directory'] = 0775;
+$settings['file_chmod_file'] = 0664;
+$settings['file_public_path'] = 'sites/default/files';
+$settings['file_private_path'] = 'sites/default/private';
+$settings['file_temp_path'] = 'sites/default/files/tmp';
+$databases['default']['default'] = [
+  'database' => 'name_of_database',
+  'username' => 'username_for_database',
+  'password' => 'password_for_user_mentioned_above',
+  'host' => 'name of host',
+  'driver' => 'mysql', //If you are using mysql.
+  'unix_socket' => '/Applications/MAMP/tmp/mysql/mysql.sock', //If you are using MAMP.
+];
+```
+
 
 ## Add your files
 
