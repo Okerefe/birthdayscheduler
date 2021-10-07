@@ -37,10 +37,39 @@ $databases['default']['default'] = [
 ];
 ```
 
-
 ## Complete your tasks
 
 You will see that the tasks range from easy to complex but do not feel discouraged as they are pretty straightforward and you will find plenty of resources out there.
+
+### Site building
+1. Fork this repo & clone your forked repository.
+2. Install Drupal and tie it to a database on your local environment.
+3. Create a Content Type called "Lessons" with the following fields:
+    - Description
+    - Start Time & End Time
+    - Useful Links
+4. Create a couple of nodes of type "Lessons" (5-10 should suffice)
+5. Create a view (page or block) in which to display the nodes based on the following:
+    - Display fields: Title, Description, Author, Author Picture, Start Time & End Time
+    - Sort result from newest to oldest
+    - Add a filter option for Start Time & End Time
+    - Add pagination and only display 5 elements per page
+6. Install & Enable a couple of modules you think are useful onto your site (2-3 should suffice)
+### Theming
+7. Install & Enable a bootstrap theme
+8. Create a subtheme which will extend the aboce mentioned bootstrap theme
+9. Define regions so that you page will only have:
+    - Header
+    - Content
+    - Footer
+10. Style the /user/login form.
+### Module Development
+11. Create a custom module structure. You are free to name your module whatever you want.
+    - Create a Controller in which to display, programatically, the current Day, Date, Month & Year
+    - Restrict Controller access only to admin
+    - Create a custom block and display it on the front page
+    - Try to inject a service (let's say current path or current user) into your controller
+12. Create an Admin Form programatically
 
 ## Upload the files
 
