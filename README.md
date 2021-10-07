@@ -57,7 +57,7 @@ You will see that the tasks range from easy to complex but do not feel discourag
 6. Install & Enable a couple of modules you think are useful onto your site (2-3 should suffice)
 ### Theming
 7. Install & Enable a bootstrap theme
-8. Create a subtheme which will extend the aboce mentioned bootstrap theme
+8. Create a subtheme which will extend the above mentioned bootstrap theme
 9. Define regions so that you page will only have:
     - Header
     - Content
