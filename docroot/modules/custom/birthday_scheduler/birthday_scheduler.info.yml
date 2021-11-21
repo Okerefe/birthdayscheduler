@@ -1,0 +1,6 @@
+name: Birthday Scheduler
+type: module
+core_version_requirement: ^8.8 || ^9
+description : Birthday Schedule Saves User's Birthdays and Schedules them
+version: 1.0
+configure: birthday_scheduler.admin_settings
