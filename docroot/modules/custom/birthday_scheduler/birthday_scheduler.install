@@ -1,0 +1,55 @@
+<?php
+/**
+ * Implements hook_schema().
+ *
+ */
+function birthday_scheduler_schema() {
+  $schema['birthday_schedules'] = [
+    'description' => 'Stores email, timestamp, nid and uid for an rsvp',
+    'fields' => [
+      'id' => [
+        'description' => 'The primary identifier for the record.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'first_name' => [
+        'description' => 'Individuals\'s first name.',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'last_name' => [
+        'description' => 'Individuals\'s last name.',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'mail' => [
+        'description' => 'Individuals\'s email address.',
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'dob' => [
+        'description' => 'Individuals\'s Date Of Birth.',
+        'type' => 'varchar',
+        'length' => 20,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Timestamp for when Birthday Entry was created.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

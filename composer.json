@@ -102,6 +102,12 @@
         "load.environment.php"
       ]
     },
+    "autoload-dev": {
+        "psr-4" : {
+            "Drupal\\Tests\\birthday_scheduler\\" : "docroot/modules/custom/birthday_scheduler/tests/src/"
+        }
+    },
+
     "require-dev": {
         "brain/monkey": "2.*",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
