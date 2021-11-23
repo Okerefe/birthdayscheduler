@@ -1,0 +1,39 @@
+<?php
+
+declare(strict_types=1);
+// -*- coding: utf-8 -*-
+/**
+ * @file
+ * Module's .module File.
+ *
+ * Used to Initialize Settings for Module
+ * Used here to declare the themes in the Birthday
+ * Scheduler Module.
+ */
+
+/**
+ * Theme Hooker Function.
+ *
+ * Functions declares themes to be used in the Module.
+ *
+ * Created To Make Code Testable.
+ *
+ * @param array $existing
+ *   Array of Existing Implementations.
+ * @param string $type
+ *   Whether the module is being processed.
+ * @param string $theme
+ *   Name of Module.
+ * @param string $path
+ *   Directory path of Module.
+ *
+ * @return array
+ *   returns true or false based on email validity.
+ */
+function birthday_scheduler_theme($existing, $type, $theme, $path) : array {
+  return [
+    'birthday_schedules' => [
+      'variables' => ['birthdays' => NULL],
+    ],
+  ];
+}

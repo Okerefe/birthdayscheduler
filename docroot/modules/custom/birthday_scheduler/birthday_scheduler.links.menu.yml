@@ -1,0 +1,6 @@
+birthday_scheduler.report:
+  title: 'List of Schedules Birthdays'
+  description: 'Display the Birthdays that have been scheduled'
+  route_name: birthday_scheduler.report
+  parent: system.admin_reports
+  weight: 0

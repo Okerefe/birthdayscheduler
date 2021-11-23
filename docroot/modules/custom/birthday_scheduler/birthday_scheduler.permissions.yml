@@ -1,6 +1,7 @@
 view birthdayform:
   title: 'View Birthday Scheduler Form'
   description: 'View and submit the Birthday Scheduler form.'
-access birthday_scheduler report:
+administer birthday_scheduler:
   title: 'Access List of Scheduled Birthdays'
   description: 'View the report listing all Scheduled Birthdays.'
+  restrict access : true

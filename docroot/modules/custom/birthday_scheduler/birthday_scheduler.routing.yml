@@ -1,0 +1,10 @@
+birthday_scheduler.report:
+  path: '/admin/reports/birthday_scheduler'
+  defaults:
+    _controller: '\Drupal\birthday_scheduler\Controller\ReportController::report'
+    _title: 'Birthday Schedules'
+  requirements:
+    _permission: 'birthday_scheduler'
+  options:
+    no_cache: 'TRUE'
+

@@ -1,0 +1,17 @@
+{# [birthday-scheduler]/templates/birthday-schedules.html.twig #}
+<div id="birthday_scheduler_root" style="margin: 0 auto;  width: 70vw;">
+  <current-date-time></current-date-time>
+
+  <h1 style="margin: 0 auto; text-align: center;">List Of Registered Birthdays:</h1>
+
+  {% for birthday in birthdays %}
+    <birthday :birthday ={{ birthday|json_encode|raw }}></birthday>
+  {% endfor %}
+  {% if birthdays|length < 1 %}
+    <h3 style="margin: 0 auto; text-align: center;">No Birthday has been Registered</h3>
+  {% endif %}
+
+</div>
+
+{{ attach_library('birthday_scheduler/birthday_schedules_listing') }}
+
