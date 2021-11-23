@@ -1,0 +1,4 @@
+birthday_schedules_listing:
+  version: 1.x
+  js:
+    js/min/listing.js: { minified: true}
