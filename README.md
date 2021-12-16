@@ -5,7 +5,7 @@
 
 
 ### About Birthday Scheduler
-Birthday Scheduler is a WordPress Module that Has the Primary Function of Saving User's Birthdays that they submit through a Form Powered by the Plugin and then displaying the Birthdays on a report page that can be accessed by the admin. this report page displays all the submitted birthdays and then tells how many days are left to that day. It also notifies in a special way, if any of the Scheduled Birthdays is the current Day.
+Birthday Scheduler is a Drupal Module that Has the Primary Function of Saving User's Birthdays that they submit through a Form Powered by the Plugin and then displaying the Birthdays on a report page that can be accessed by the admin. this report page displays all the submitted birthdays and then tells how many days are left to that day. It also notifies in a special way, if any of the Scheduled Birthdays is the current Day.
 This report page also displays the current date and time.
 
 ### Installation and Use.
